@@ -1,31 +1,49 @@
-console.log(" Welcom by Cesar Cipher  Encryption!!");
+console.log("Welcome by Caesar Cipher Encryption!!");
 
+// Alphabet als Array
 const alphabet = [
   'a','b','c','d','e','f','g','h','i','j','k','l','m',
   'n','o','p','q','r','s','t','u','v','w','x','y','z'
 ];
-let  phrase= process.argv[2];
 
-const shiftNumber = process.argv[3];
+// Input der Satz oder das Wort
+let phrase = process.argv[2];
+// input der shift Number
+const shiftNumber = parseInt(process.argv[3]);
 
-function cesar (){
+//hinweis wenn nichts schreiben 
+if (!phrase ) {
+  console.log("Please write your message and your shift number");
+  process.exit();
+}
+// alles wird klein geschrieben
+phrase = phrase.toLowerCase();
 
-       if (!phrase){
-    console.log("Please write your message and your shift number"); } 
+//funktion für konvertieren der staz oder das wort 
+function cesar() {
+  let result = '';
 
-    let result = '';
-    let char =  char.toLowerCase() ;
+  //  Schleife durch jeden Buchstaben im Satz
+  for (let i = 0; i < phrase.length; i++) {
+    let char = phrase[i];
 
-        for( i=0 ; i < alphabet.length ; i++ );
-        const index = alphabet.indexOf(char);
-        const shiftedIndex =  (index + shiftNumber)%26;
+    //  Wenn der Buchstabe im Alphabet ist
+    if (alphabet.includes(char)) {
+      const index = alphabet.indexOf(char); // finde der position für der alphabet
+      let shiftedIndex = (index + shiftNumber) % 26; // die neue position 
+      // wenn die shiftnumber ist negative
+      if (shiftedIndex < 0) {
+        shiftedIndex += 26;
+      }
 
-        if (shiftNumber < 0 ){
-            shiftedIndex += 26 ; }
-  let newChar =  alphabet[shiftedIndex];
-  result += newChar;
-   
+      let newChar = alphabet[shiftedIndex]; // neue   Buchstabe
+      result += newChar; // zum ergebnis hinzufügen
+    } 
+  }
+
+  //zeig das Ergebnis
   console.log("Encrypted message:", result);
 }
-
+// funktion anrufen
+cesar();
 
