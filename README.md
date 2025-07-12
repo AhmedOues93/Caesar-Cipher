@@ -27,8 +27,21 @@ It’s a simple command-line tool that encrypts or decrypts a message using the 
 ## 📁 Project Structure
 
 Caesar-Cipher/
-├── caesar-cipher.js # Main script containing Caesar Cipher logic
-└── README.md # Project documentation
+   ├── caesar-cipher.js # Main script containing Caesar Cipher logic
+        └── README.md # Project documentation
 
+🚀 How to Run the Project
+Clone the repository
 
+#bash:
+Kopieren
+Bearbeiten
+git clone https://github.com/AhmedOues93/Caesar-Cipher.git
+cd Caesar-Cipher
+Run the script with Node.js
+
+#bash:
+Kopieren
+Bearbeiten
+node caesar-cipher.js
 
