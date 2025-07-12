@@ -77,8 +77,6 @@ Non-alphabet characters are not changed.
 
 Case is preserved (uppercase stays uppercase, lowercase stays lowercase).
 
-🤝 Contributing
-Feel free to open issues or submit pull requests if you want to improve this project!
 
 📫 Contact
 You can reach me via GitHub: AhmedOues93
